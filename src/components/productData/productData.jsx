@@ -14,7 +14,7 @@ console.log(latestProducts);
             <h2 className="text-2xl font-bold">Popular Products</h2>
 
 
-            <div className="py-10 grid grid-cols-3">
+            <div className="py-10 grid grid-cols-2 md:grid-cols-3">
                 {
                     latestProducts.map((latestProduct,index) =>
                        <ProductCart key={index} latestProduct={latestProduct}></ProductCart>

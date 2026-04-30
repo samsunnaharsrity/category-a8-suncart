@@ -15,9 +15,10 @@ const Navbar = () => {
 
 
         
-        <div className="border-b shadow flex justify-between items-center">
+      <div className="border-b shadow px-2">
 
-        <div className="flex justify-between items-center container mx-auto my-2">
+      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center container mx-auto my-2 ">
         <div className="flex items-center">
                <Image
                src={"/logo.png"}
@@ -29,7 +30,7 @@ const Navbar = () => {
                ></Image>
 
             <div>
-                <h2 className="text-2xl md:text-2xl text-orange-400 font-bold">Sun<span className="text-black">Cart</span></h2>
+                <h2 className="text-2xl md:text-2xl text-orange-500 font-bold">Sun<span className="text-black">Cart</span></h2>
                 <p className="text-zinc-400 text-[10px] hidden sm:block">Summer Essentials Store</p>                
             </div>    
         </div>
@@ -58,7 +59,7 @@ const Navbar = () => {
                 </p>
 
                 <Button variant="outline" className=" rounded-md py-1 px-5">Login</Button>
-                <Button className=" rounded-md py-1 px-5 bg-orange-400 hover:bg-orange-500">Register</Button>
+                <Button className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-400">Register</Button>
                 
             </div>
           
@@ -67,36 +68,37 @@ const Navbar = () => {
 
                             {/* responsive sidebar */}
 
-    <div className="relative flex">
+      <div className="relative flex">
 
-      <div
-        className=" md:hidden text-2xl cursor-pointer px-2  relative z-4"
-        onClick={() => setOpen(!open)}
-      >
-        {open ? <IoMdCloseCircleOutline /> : <HiMenuAlt3 />}
-      </div>
-
-      {open && (
         <div
-          className="absolute inset-0 md:hidden z-40"
-          onClick={() => setOpen(false)}
-        />
-      )}
-
-      <div
-        className={`absolute top-0 right-0 text-right p-4 z-1
-        transform transition-transform duration-300 md:hidden
-        ${open ? "translate-x-0" : "translate-x-full"}`}
-      >
-        <div className=" font-semibold">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/product">Products</NavLink>
-          <NavLink href="/myProfile">My Profile</NavLink>
+          className=" md:hidden text-2xl cursor-pointer px-2  relative z-4"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <IoMdCloseCircleOutline /> : <HiMenuAlt3 />}
         </div>
-      </div>
 
-    </div>
-        </div>  
+        {open && (
+          <div
+            className="absolute inset-0 md:hidden z-40"
+            onClick={() => setOpen(false)}
+          />
+        )}
+
+        <div
+          className={`absolute top-0 right-0 text-right p-4 z-1
+          transform transition-transform duration-300 md:hidden
+          ${open ? "translate-x-0" : "translate-x-full"}`}
+        >
+          <div className=" font-semibold">
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/product">Products</NavLink>
+            <NavLink href="/myProfile">My Profile</NavLink>
+          </div>
+        </div>
+
+      </div>          
+      </div>
+      </div>  
     
     );
 }
