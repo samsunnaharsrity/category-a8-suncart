@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.className} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col ">
-        <main>
+        <main className="container mx-auto ">
           <Navbar></Navbar>
           {children}
           <Footer></Footer>
