@@ -70,7 +70,7 @@ const Navbar = () => {
     <div className="relative flex">
 
       <div
-        className=" md:hidden text-2xl cursor-pointer px-2  relative z-40"
+        className=" md:hidden text-2xl cursor-pointer px-2  relative z-4"
         onClick={() => setOpen(!open)}
       >
         {open ? <IoMdCloseCircleOutline /> : <HiMenuAlt3 />}
@@ -84,7 +84,7 @@ const Navbar = () => {
       )}
 
       <div
-        className={`absolute top-0 right-0 text-right p-4 z-15 
+        className={`absolute top-0 right-0 text-right p-4 z-1
         transform transition-transform duration-300 md:hidden
         ${open ? "translate-x-0" : "translate-x-full"}`}
       >
