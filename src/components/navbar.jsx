@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
 
 
-            <div className="flex gap-2 hidden sm:flex ">
+            <div className=" gap-2 hidden md:flex ">
                 <p className=" border rounded-full items-center flex px-2">
                     <IoIosSearch />
                 </p>

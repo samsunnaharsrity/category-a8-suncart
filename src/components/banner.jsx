@@ -70,7 +70,7 @@ const Banner = () => {
         </div> 
 
                             {/* right side img */}
-        <div className="top-21 left-65 absolute md:top-17 md:left-60 lg:left-96">
+        <div className="top-21 left-65 absolute md:top-16.5 md:left-75 lg:left-100">
             <img
                 src="/side-banner.png"
                 className=" w-[250px] md:w-[500px] h-full object-contain"
