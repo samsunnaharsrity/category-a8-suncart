@@ -1,5 +1,6 @@
 import { Card, Chip } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { RiStarSFill } from 'react-icons/ri';
 
@@ -9,6 +10,8 @@ console.log(latestProduct);
 
     return (
 
+    <div>
+        
     <Card className='border rounded-xl m-5 items-center justify-center'>
         <div className='relative w-full aspect-square '>
         <Image src={latestProduct.image} 
@@ -46,10 +49,14 @@ console.log(latestProduct);
 
         <div className='w-full flex justify-center border py-2 rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white'>
             <button className=' font-semibold text-[12px]'> 
-                View Details
+                <Link href={'/products'}>View Details</Link>
             </button>
         </div>
-    </Card>
+
+    </Card> 
+    
+         
+    </div>   
 
     );
 }

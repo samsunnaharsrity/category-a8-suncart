@@ -25,11 +25,11 @@ export default function RootLayout({ children }) {
       className={`${geistSans.className} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col ">
-          <Navbar></Navbar>
+        <Navbar></Navbar>
         <main className="container mx-auto ">
           {children}
-          <Footer></Footer>
         </main>
+          <Footer></Footer>
       </body>
     </html>
   );

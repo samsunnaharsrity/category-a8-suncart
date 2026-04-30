@@ -9,7 +9,7 @@ import { TiSocialFacebook } from 'react-icons/ti';
 
 const Footer = () => {
     return (
-        <div className='bg-blue-950 container mx-auto rounded-md'>
+        <div className='bg-blue-950 rounded-md'>
 
         <div className=' md:flex justify-around px-20 py-10 '>
 
