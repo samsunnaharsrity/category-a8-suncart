@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Beach Straw Hat",
+    "brand": "SunnyWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 18,
+    "description": "Lightweight straw hat for sun protection at the beach.",
+    "image": "https://i.postimg.cc/example2.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Aloe Vera Sunscreen SPF50",
+    "brand": "GlowCare",
+    "price": 20,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Water-resistant sunscreen with aloe vera extract.",
+    "image": "https://i.postimg.cc/example3.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Cooling Water Bottle",
+    "brand": "HydroFresh",
+    "price": 10,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Reusable insulated water bottle to keep drinks cold.",
+    "image": "https://i.postimg.cc/example4.png",
+    "category": "Essentials"
+  },
+  {
+    "id": 5,
+    "name": "Flip Flop Sandals",
+    "brand": "WalkEasy",
+    "price": 18,
+    "rating": 4.3,
+    "stock": 14,
+    "description": "Comfortable flip flop sandals for summer walks.",
+    "image": "https://i.postimg.cc/example5.png",
+    "category": "Footwear"
+  },
+  {
+    "id": 6,
+    "name": "Portable Mini Fan",
+    "brand": "CoolBreeze",
+    "price": 22,
+    "rating": 4.6,
+    "stock": 12,
+    "description": "Rechargeable handheld mini fan for hot days.",
+    "image": "https://i.postimg.cc/example6.png",
+    "category": "Electronics"
+  },
+  {
+    "id": 7,
+    "name": "Summer Tote Bag",
+    "brand": "CarryJoy",
+    "price": 16,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Spacious tote bag perfect for shopping or travel.",
+    "image": "https://i.postimg.cc/example7.png",
+    "category": "Bags"
+  },
+  {
+    "id": 8,
+    "name": "After Sun Lotion",
+    "brand": "SkinRelief",
+    "price": 14,
+    "rating": 4.7,
+    "stock": 17,
+    "description": "Moisturizing lotion to soothe skin after sun exposure.",
+    "image": "https://i.postimg.cc/example8.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 9,
+    "name": "Summer Cotton T-Shirt",
+    "brand": "FreshFit",
+    "price": 19,
+    "rating": 4.6,
+    "stock": 22,
+    "description": "Breathable cotton t-shirt ideal for warm weather.",
+    "image": "https://i.postimg.cc/example9.png",
+    "category": "Clothing"
+  }
+]
