@@ -16,7 +16,7 @@ console.log(latestProducts);
             <h2 className="text-3xl font-bold">Popular Products</h2>
 
 
-            <div className="py-10 grid grid-cols-2 md:grid-cols-3">
+            <div className=" grid grid-cols-2 md:grid-cols-3">
                 {
                     latestProducts.map((latestProduct,index) =>
                        <ProductCart key={index} latestProduct={latestProduct}></ProductCart>
@@ -25,7 +25,7 @@ console.log(latestProducts);
             </div>
 
             <div className="mx-auto flex w-fit bg-orange-500 text-gray-100 px-5 py-3 font-bold text-[10px] hover:bg-orange-600 rounded-md mb-10 ">
-                <NavLink href={'/product'} >
+                <NavLink href={'/all-products'} >
                     <span className="w-[70px] text-center">More Products</span>
                 </NavLink>  
             </div>
