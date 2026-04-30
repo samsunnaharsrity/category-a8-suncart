@@ -60,7 +60,7 @@ const Banner = () => {
         </div>    
 
                             {/* shop now btn */}
-        <div className="absolute bottom-13 left-40 md:left-53 md:bottom-15 ">
+        <div className="absolute bottom-13 left-40 md:left-55 md:bottom-15 ">
             <button className="bg-orange-500 text-gray-800 px-2 py-1 font-bold text-[10px]  md:px-6 md:py-2 md:text-[12px] rounded-xl flex items-center gap-1"> 
                 Shop Now
                 <FaArrowRight />
