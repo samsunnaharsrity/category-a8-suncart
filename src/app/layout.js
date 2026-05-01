@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      theme ="light"
       className={`${geistSans.className} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col ">
