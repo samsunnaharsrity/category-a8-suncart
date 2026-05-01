@@ -4,6 +4,21 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { RiStarSFill } from "react-icons/ri";
 
 
+export const generateMetadata = async({params})=> {
+    const {data} =await params;
+    console.log(data);
+
+  const res = await fetch("https://category-a8-suncart.vercel.app/data.json");
+  const allProducts = await res.json();
+
+  const product = allProducts.find(item => item.id == data);
+
+  return {
+    title: product.name,
+    description: product.description,
+  };
+};
+
 const ProductDetailsPage = async({params}) => {
 
 const {data} = await params;

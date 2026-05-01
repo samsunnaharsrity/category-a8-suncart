@@ -1,6 +1,11 @@
 import ProductCart from '@/components/productCart/productCart';
 import React from 'react';
 
+export const metadata = {
+  title: "SunCart - Products",
+  description: "Summer Essentials Store",
+};
+
 const AllProductsPage =async () => {
 
 const res = await fetch("https://category-a8-suncart.vercel.app/data.json")

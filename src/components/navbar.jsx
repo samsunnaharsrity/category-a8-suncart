@@ -58,8 +58,12 @@ const Navbar = () => {
                     <IoCartOutline />
                 </p>
 
-                <Button variant="outline" className=" rounded-md py-1 px-5">Login</Button>
-                <Button className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">Register</Button>
+                <Button variant="outline" className=" rounded-md py-1 px-5">
+                  <Link href={"/signUp"}>Login</Link>
+                </Button>
+                <Button className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
+                   <Link href={"/"}>Register</Link>
+                </Button>
                 
             </div>
           

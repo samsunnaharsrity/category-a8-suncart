@@ -2,6 +2,7 @@ import Link from "next/link";
 import ProductCart from "../productCart/productCart";
 import NavLink from "../navLink";
 
+
 const ProductData = async() => {
 
 const res = await fetch("https://category-a8-suncart.vercel.app/data.json")
