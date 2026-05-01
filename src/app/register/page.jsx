@@ -11,6 +11,7 @@ import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import { Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
@@ -20,7 +21,7 @@ import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 export function RegisterPage() {
 
 const [isShowPass , setIsShowPass ] = useState(false)   
-
+const router = useRouter();
 
 const handleGoogleSignIn = async() =>{
   const data = await authClient.signIn.social({
@@ -53,9 +54,12 @@ const handleGoogleSignIn = async() =>{
     if (error){
       alert('error signUp ' + error.message)
     }
-    if(data){
-      alert('submit successfully')
-    }
+      if (data) {
+    router.push("/"); // 🔥 manual redirect
+  }
+    // if(data){
+    //   alert('submit successfully')
+    // }
     else{
       return
     }
