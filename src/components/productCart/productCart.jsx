@@ -30,10 +30,13 @@ console.log(latestProduct);
         </div>
 
         <div className='flex items-center gap-1 font-semibold'>
-            <span className='text-orange-300 text-[20px]'><RiStarSFill /></span>
+            <span className='text-orange-300 text-[20px]'>
+                <RiStarSFill />
+            </span>
             <p>{latestProduct.rating}</p>
         </div>
 
+                        {/* products pricing */}
         <div className="flex items-center gap-2 justify-center">
             <p className="text-lg font-bold text-orange-500">
             ${latestProduct.price - (latestProduct.price * latestProduct.discountPrice) / 100}
@@ -47,9 +50,9 @@ console.log(latestProduct);
             </span>
         </div>
 
-        <div className='w-full flex justify-center border py-2 rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white'>
+        <div className='w-full flex justify-center border py-2 rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer'>
             <button className=' font-semibold text-[12px]'> 
-                <Link href={'/products'}>View Details</Link>
+                <Link href={`/all-products/${latestProduct.id}`}>View Details</Link>
             </button>
         </div>
 
