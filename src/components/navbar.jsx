@@ -62,7 +62,7 @@ const Navbar = () => {
                   <Link href={"/signUp"}>Login</Link>
                 </Button>
                 <Button className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
-                   <Link href={"/"}>Register</Link>
+                   <Link href={"/register"}>Register</Link>
                 </Button>
                 
             </div>
