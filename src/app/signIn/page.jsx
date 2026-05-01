@@ -9,11 +9,16 @@ import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import { Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import Link from "next/link";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 
 
 export function SignInPage() {
+
+const [isShowPass , setIsShowPass ] = useState(false)
+
 
 const {register,
     handleSubmit,} = useForm()
@@ -91,10 +96,11 @@ const {register,
       </TextField>
                     {/* password */}
       <TextField
+      className="relative"
         isRequired
         minLength={8}
         name="password"
-        type="password"
+        type={isShowPass ? "text":"password"}
         validate={(value) => {
           if (value.length < 8) {
             return "Password must be at least 8 characters";
@@ -113,6 +119,11 @@ const {register,
         <Input placeholder="Enter your password" 
         {...register("password")}
         />
+        <span onClick={() => setIsShowPass(!isShowPass)}
+          className="absolute right-3 top-8.5 text-gray-400"
+          >
+          {isShowPass? <FaRegEye /> : <FaRegEyeSlash /> }
+        </span>
         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
         <FieldError />
       </TextField>
@@ -132,6 +143,10 @@ const {register,
     <p className=" text-gray-500 text-[12px] px-2">Don't have an account? 
         <Link href={"/register"} className="text-red-500">Register</Link>    
     </p>  
+
+    <div>
+      
+    </div>
     </Form> 
 
     </div>    

@@ -9,7 +9,7 @@ const res = await fetch("https://category-a8-suncart.vercel.app/data.json")
 const data = await res.json()
 console.log(data);
 
-const latestProducts = data.slice(0,6)
+const latestProducts = data.slice(0,3)
 console.log(latestProducts);
 
     return (

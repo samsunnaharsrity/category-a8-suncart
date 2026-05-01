@@ -3,13 +3,20 @@ import { IoIosSearch, IoMdCloseCircleOutline } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import NavLink from "./navLink";
 import { useState } from "react";
+import { authClient } from "@/lib/auth-client";
 
 
 const Navbar = () => {
+
+const { data: session } = authClient.useSession()
+//console.log(session);
+const user = session?.user;
+console.log(user);
+
     const [open, setOpen] = useState(false);
     return (
 
@@ -57,13 +64,41 @@ const Navbar = () => {
                 <p className="rounded-full border items-center flex px-2">
                     <IoCartOutline />
                 </p>
+ 
 
-                <Button variant="outline" className=" rounded-md py-1 px-5">
+                  {/* nav buttons */}
+{
+          user? (
+          <div className="flex items-center gap-1">
+               {/* <Image
+               src={"/userImg.png"}
+               alt="nav logo"
+               referrerPolicy="no-referrer"
+               loading="eager"
+               width={35}
+               height={20}
+               className=""
+               ></Image> */}
+              <Avatar className="w-[30px] h-[30px] ">
+              <Avatar.Image alt="user img"
+              src={user?.image} />
+              <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
+            </Avatar>
+
+
+                <Button 
+                onClick={async() => await authClient.signOut()} 
+                className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
+                   <Link href={"/"}>Logout</Link>
+                </Button>
+
+          </div>)            
+           :         
+                (<Button variant="outline" className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
                   <Link href={"/signIn"}>Login</Link>
-                </Button>
-                <Button className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
-                   <Link href={"/register"}>Register</Link>
-                </Button>
+                </Button>)
+}
+
                 
             </div>
           
