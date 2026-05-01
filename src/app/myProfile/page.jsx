@@ -1,5 +1,6 @@
 "use client"
 
+import UpdateProfileModal from "@/components/updateProfileModal";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Card } from "@heroui/react";
 
@@ -11,10 +12,12 @@ import { Avatar, Card } from "@heroui/react";
 
 const MyProfilePage = () => {
 
-const { data: session } = authClient.useSession()
-//console.log(session);
-const user = session?.user;
-console.log(user);
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+
+  if (!user) {
+    return <p className="text-center my-10">Loading...</p>;
+  }
 
 
     return (
@@ -34,6 +37,8 @@ console.log(user);
                 <div>
                     <h1 className="text-gray-400">{user?.email}</h1>
                 </div>
+
+                <UpdateProfileModal></UpdateProfileModal>
             </Card>
         </div>
     );
