@@ -13,31 +13,30 @@ import { useForm } from "react-hook-form";
 
 
 
-export function SignUpPage() {
+export function SignInPage() {
 
 const {register,
     handleSubmit,} = useForm()
 
-  const onSubmit =(data) => {
-    console.log(data);
-    // e.preventDefault();
-    // const formData = new FormData(e.currentTarget);
-    // const userData =Object.fromEntries(formData.entries());
-    // console.log(userData);
+  const onSubmit = async(userData) => {
+    console.log(userData);
 
 
-    // const {data , error} = await authClient.signUp.email({
-    //   name : userData.name,
-    //   email : userData.email,
-    //   password : userData.password,
-    //   callbackURL : '/'
+    const {email, password }= userData;
+    console.log(email , password);
+
+    const {data , error} = await authClient.signIn.email({
+      email : email,
+      password : password,
+      rememberMe: true ,
+      callbackURL : '/'
       
-    // })
-    // console.log({data, error});
+    })
+    console.log({data, error});
 
-    // if (error){
-    //   alert('error signUp ' + error.message)
-    // }
+    if (error){
+      alert('error signIn ' + error.message)
+    }
     if(data){
       alert('submit successfully')
     }
@@ -58,7 +57,7 @@ const {register,
             </h2>
             <p className="text-sm text-gray-500 ">Please Login To Use the Platform</p>
         </div>
-                    {/* name */}
+                    {/* name
       <TextField
         isRequired
         name="name"
@@ -69,7 +68,7 @@ const {register,
         {...register("name")}
         />
         <FieldError />
-      </TextField>
+      </TextField> */}
 
                     {/* email */}
       <TextField
@@ -121,8 +120,7 @@ const {register,
                     {/* buttons */}
       <div className="flex gap-2 ">
         <button type="submit" className="flex items-center justify-center w-[120px] h-[30px] text-[12px] border rounded-full text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer">
-          <Check className="text-[12px]"/>
-          Submit
+          Login
         </button>
         
         <button type="reset" className="flex items-center justify-center w-[120px] h-[30px] text-[12px]  border py-2 px-0 rounded-full text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer" >
@@ -139,4 +137,4 @@ const {register,
     </div>    
   );
 }
-export default SignUpPage;
+export default SignInPage;

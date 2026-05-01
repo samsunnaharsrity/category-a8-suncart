@@ -59,7 +59,7 @@ const Navbar = () => {
                 </p>
 
                 <Button variant="outline" className=" rounded-md py-1 px-5">
-                  <Link href={"/signUp"}>Login</Link>
+                  <Link href={"/signIn"}>Login</Link>
                 </Button>
                 <Button className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
                    <Link href={"/register"}>Register</Link>
