@@ -96,7 +96,7 @@ console.log(products);
                     </div>
 
 
-                    <span className="absolute top-[25px] right-[100px] bg-red-500 text-white px-4 py-2 rounded-l-full font-bold shadow-lg">
+                    <span className="absolute top-[25px] right-[150px] bg-red-500 text-white px-4 py-2 rounded-l-full font-bold shadow-lg">
                     {products.discountPrice}% OFF
                     </span>
 
