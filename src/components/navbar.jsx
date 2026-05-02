@@ -124,9 +124,10 @@ console.log(user);
         )}
 
         <div
-          className={`absolute top-0 right-0 text-right p-4 z-1
+          className={`absolute top-0 right-0 text-right p-4 z-10
           transform transition-transform duration-300 md:hidden
-          ${open ? "translate-x-0" : "translate-x-full"}`}
+
+          ${open ? "translate-x-0 opacity-100 pointer-events-auto" : "translate-x-full opacity-0 pointer-events-none"}`}
         >
           <div className=" font-semibold">
             <NavLink href="/">Home</NavLink>
