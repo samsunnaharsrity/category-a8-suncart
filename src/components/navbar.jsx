@@ -20,11 +20,12 @@ console.log(user);
     const [open, setOpen] = useState(false);
     return (
 
-
+//  className="flex justify-between items-center container mx-auto px-4"
         
       <div className="border-b shadow sticky top-0 z-50 bg-white w-full">
 
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
+      <div className="container mx-auto flex justify-between items-center ">
+        
       <div className="flex justify-between items-center">
         <div className="flex items-center">
                <Image
@@ -41,73 +42,12 @@ console.log(user);
                 <p className="text-zinc-400 text-[10px] hidden sm:block">Summer Essentials Store</p>                
             </div>    
         </div>
-
-        <div className="hidden md:block">
-                <ul className=" flex items-center justify-between gap-4 font-semibold text-[12px]">
-                    <li>
-                        <NavLink href={'/'}>Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink href={'/all-products'}>Products</NavLink>
-                    </li>
-                    <li>
-                        <NavLink href={'/myProfile'}>My Profile</NavLink>
-                    </li>
-                </ul>
-        </div>
-
-
-            <div className=" gap-2 hidden md:flex ">
-                <p className=" border rounded-full items-center flex px-2">
-                    <IoIosSearch />
-                </p>
-                <p className="rounded-full border items-center flex px-2">
-                    <IoCartOutline />
-                </p>
- 
-
-                  {/* nav buttons */}
-{
-          user? (
-          <div className="flex items-center gap-1">
-               {/* <Image
-               src={"/userImg.png"}
-               alt="nav logo"
-               referrerPolicy="no-referrer"
-               loading="eager"
-               width={35}
-               height={20}
-               className=""
-               ></Image> */}
-              <Avatar className="w-[30px] h-[30px] ">
-              <Avatar.Image alt="user img"
-              src={user?.image} />
-              <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
-            </Avatar>
-
-
-                <Button 
-                onClick={async() => await authClient.signOut()} 
-                className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
-                   <Link href={"/"}>Logout</Link>
-                </Button>
-
-          </div>)            
-           :         
-                (<Button variant="outline" className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
-                  <Link href={"/signIn"}>Login</Link>
-                </Button>)
-}
-
-                
-            </div>
           
-        </div>
-
+      </div>
 
                             {/* responsive sidebar */}
 
-      <div className="relative flex">
+      <div className="relative md:hidden">
 
         <div
           className=" md:hidden text-2xl cursor-pointer px-2  relative z-30"
@@ -136,8 +76,71 @@ console.log(user);
           </div>
         </div>
 
-      </div>          
+      </div>  
+              
+                          {/* nav link */}
+        <div className="hidden md:block">
+                <ul className=" flex items-center justify-between gap-4 font-semibold text-[12px]">
+                    <li>
+                        <NavLink href={'/'}>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink href={'/all-products'}>Products</NavLink>
+                    </li>
+                    <li>
+                        <NavLink href={'/myProfile'}>My Profile</NavLink>
+                    </li>
+                </ul>
+        </div>
+
+
+        <div className=" gap-2 hidden md:flex ">
+            <p className=" border rounded-full items-center flex px-2">
+                <IoIosSearch />
+            </p>
+            <p className="rounded-full border items-center flex px-2">
+                <IoCartOutline />
+            </p>
+
+
+              {/* nav buttons */}
+{
+      user? (
+      <div className="flex items-center gap-1">
+            {/* <Image
+            src={"/userImg.png"}
+            alt="nav logo"
+            referrerPolicy="no-referrer"
+            loading="eager"
+            width={35}
+            height={20}
+            className=""
+            ></Image> */}
+          <Avatar className="w-[30px] h-[30px] ">
+          <Avatar.Image alt="user img"
+          src={user?.image} />
+          <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
+        </Avatar>
+
+
+            <Button 
+            onClick={async() => await authClient.signOut()} 
+            className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
+                <Link href={"/"}>Logout</Link>
+            </Button>
+
+      </div>)            
+        :         
+            (<Button variant="outline" className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
+              <Link href={"/signIn"}>Login</Link>
+            </Button>)
+}
+
+            
+        </div>
       </div>
+
+
       </div>  
     
     );
