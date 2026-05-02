@@ -110,7 +110,7 @@ console.log(user);
       <div className="relative flex">
 
         <div
-          className=" md:hidden text-2xl cursor-pointer px-2  relative z-4"
+          className=" md:hidden text-2xl cursor-pointer px-2  relative z-30"
           onClick={() => setOpen(!open)}
         >
           {open ? <IoMdCloseCircleOutline /> : <HiMenuAlt3 />}
@@ -118,16 +118,16 @@ console.log(user);
 
         {open && (
           <div
-            className="absolute inset-0 md:hidden z-20"
+            className="fixed inset-0 md:hidden z-10"
             onClick={() => setOpen(false)}
           />
         )}
 
         <div
-          className={`absolute top-0 right-0 text-right p-4 z-10
+          className={`absolute top-0 right-0 text-right p-4 z-20
           transform transition-transform duration-300 md:hidden
 
-          ${open ? "translate-x-0" : "translate-x-full hidden"}`}
+          ${open ? "translate-x-0 opacity-100 pointer-events-auto" : "translate-x-full opacity-0 pointer-events-none"}`}
         >
           <div className=" font-semibold">
             <NavLink href="/">Home</NavLink>
