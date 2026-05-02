@@ -20,5 +20,6 @@ if (!session){
 }
  
 export const config = {
-  // matcher: ['/myProfile' , '/all-products/:path'],
+  matcher: ['/myProfile' ],
 }
+// , '/all-products/:path'
