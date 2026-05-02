@@ -101,7 +101,7 @@ console.log(products);
                     </span>
 
                             {/* button */}
-                    <div className="flex gap-2 justify-between">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
                         <button className='w-full flex justify-center border py-2 rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer'>
                             Add to Cart
 
