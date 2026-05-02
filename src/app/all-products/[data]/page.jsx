@@ -35,7 +35,7 @@ console.log(products);
 
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 {/* details page img */}
                 <div className="relative w-[400px] h-[450px] sm:h-[450px]aspect-square ">
