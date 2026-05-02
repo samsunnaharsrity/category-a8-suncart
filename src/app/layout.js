@@ -16,8 +16,13 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "SunCart",
   description: "Summer Essentials Store",
+  icon: "/logo2.png",
 };
-
+// export const metadata = {
+//   icons: {
+//     icon: "/icon.png",
+//   },
+// };
 export default function RootLayout({ children }) {
   return (
     <html

@@ -1,4 +1,5 @@
 import ProductCart from '@/components/productCart/productCart';
+import { Spinner } from '@heroui/react';
 import React from 'react';
 
 export const metadata = {
@@ -8,9 +9,18 @@ export const metadata = {
 
 const AllProductsPage =async () => {
 
-const res = await fetch("https://category-a8-suncart.vercel.app/data.json")
+const res = await fetch("http://localhost:3000/data.json")
 const allProducts = await res.json()
 console.log(allProducts);
+
+
+ if (!allProducts) {
+    return <div className="flex flex-col items-center gap-2">
+        <Spinner color="warning" />
+        <span className="text-xs text-muted">Loading...</span>
+      </div>
+  }
+      
 
     return (
         <div>

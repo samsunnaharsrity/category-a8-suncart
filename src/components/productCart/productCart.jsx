@@ -1,16 +1,29 @@
+"use client"
 import { Card, Chip } from '@heroui/react';
+import { useSpring , animated  } from '@react-spring/web';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { RiStarSFill } from 'react-icons/ri';
 
 const ProductCart = ({latestProduct}) => {
-
 console.log(latestProduct);
 
-    return (
+const [hovered, setHovered] = useState(false);
 
-    <div>
+  const styles = useSpring({
+    from: { opacity: 0, transform: "translateY(60px)" },
+    to: { opacity: 1, transform: "translateY(0px)" },
+  });
+  console.log(styles);
+
+const style = useSpring({
+    transform: hovered ? "scale(1.05)" : "scale(1)",
+})
+
+return (
+
+    <animated.div style={styles}>
         
     <Card className='border rounded-xl m-5 items-center justify-center'>
         <div className='relative w-full aspect-square '>
@@ -50,16 +63,19 @@ console.log(latestProduct);
             </span>
         </div>
 
-        <div className='w-full flex justify-center border py-2 rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer'>
+        <animated.div style={style}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+        className='w-full flex justify-center border py-2 rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer'>
             <button className=' font-semibold text-[12px]'> 
                 <Link href={`/all-products/${latestProduct.id}`}>View Details</Link>
             </button>
-        </div>
+        </animated.div>
 
     </Card> 
     
          
-    </div>   
+    </animated.div>   
 
     );
 }

@@ -2,7 +2,7 @@
 
 import UpdateProfileModal from "@/components/updateProfileModal";
 import { authClient } from "@/lib/auth-client";
-import { Avatar, Card } from "@heroui/react";
+import { Avatar, Card, Spinner } from "@heroui/react";
 
 
 // export const metadata = {
@@ -16,7 +16,10 @@ const MyProfilePage = () => {
   const user = session?.user;
 
   if (!user) {
-    return <p className="text-center my-10">Loading...</p>;
+    return <div className="flex flex-col items-center gap-2">
+            <Spinner color="warning" />
+            <span className="text-xs text-muted">Loading...</span>
+          </div>
   }
 
 

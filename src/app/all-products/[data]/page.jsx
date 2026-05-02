@@ -25,7 +25,7 @@ const {data} = await params;
 console.log(data);
 
 
-const res = await fetch("https://category-a8-suncart.vercel.app/data.json")
+const res = await fetch("http://localhost:3000/data.json")
 const allProducts = await res.json()
  console.log(allProducts ,"fetch");
 
