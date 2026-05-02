@@ -13,7 +13,7 @@ const latestProducts = data.slice(0,3)
 console.log(latestProducts);
 
     return (
-        <div className="mt-10 px-4 sm:px-6 lg-px-0">
+        <div className="mt-10 px-4 sm:px-6 lg:px-0">
             <h2 className="text-3xl font-bold sm:text-left mb-6">Popular Products</h2>
 
 
