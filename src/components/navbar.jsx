@@ -25,7 +25,7 @@ console.log(user);
       <div className="border-b shadow px-2">
 
       <div className="flex justify-between items-center">
-      <div className="flex justify-between items-center container mx-auto my-2 ">
+      <div className="flex justify-between items-center container mx-auto ">
         <div className="flex items-center">
                <Image
                src={"/logo.png"}
@@ -118,7 +118,7 @@ console.log(user);
 
         {open && (
           <div
-            className="absolute inset-0 md:hidden z-40"
+            className="absolute inset-0 md:hidden z-20"
             onClick={() => setOpen(false)}
           />
         )}
@@ -130,7 +130,7 @@ console.log(user);
         >
           <div className=" font-semibold">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/product">Products</NavLink>
+            <NavLink href="/all-products">Products</NavLink>
             <NavLink href="/myProfile">My Profile</NavLink>
           </div>
         </div>
