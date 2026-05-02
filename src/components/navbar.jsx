@@ -22,7 +22,7 @@ console.log(user);
 
 
         
-      <div className="border-b shadow px-2 sticky top-0 z-50 bg-white">
+      <div className="border-b shadow px-2 sticky top-0 z-10 bg-white">
 
       <div className="flex justify-between items-center">
       <div className="flex justify-between items-center container mx-auto ">
