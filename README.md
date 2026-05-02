@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- Readme.md: Include a README file with the project name, purpose, live URL, key features, and any npm packages -->
 
-## Getting Started
 
-First, run the development server:
+i)project name :-
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+SunCart – Summer Essentials Store
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+ii)live URL :-
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+iii)Project purpose:-
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+SunCart is a modern and responsive summer-themed eCommerce web application designed to provide users with a smooth online shopping experience for seasonal products.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The platform allows users to explore various summer essentials such as sunglasses, skincare products, beach accessories, and summer outfits. Users can view product details, add items to the cart, and place orders after authentication.
 
-## Deploy on Vercel
+The main goal of this project is to build a clean, fast, and user-friendly shopping interface using modern web technologies like Next.js and Tailwind CSS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+iv)key features :-
+
+
+1. Browse summer essential products by category
+2. View detailed product information
+3. Secure user authentication (login & registration)
+4. Add to cart functionality
+5. Fully responsive design (mobile, desktop)
+6. Fast performance with Next.js routing
+7. Modern and unique summer-themed UI design
+8. Page refresh safe routing
+9. Reusable and scalable component structure
+10. Clean and minimal user interface
+11. User profile & update her information
+
+
+
+v)NPM Packages Used :-
+
+***Core Dependencies
+1. next – React framework for production
+2. react – UI library
+3. react-dom – DOM rendering for React
+
+***UI & Styling
+1. tailwindcss – Utility-first CSS framework
+2. heroUi – Pre-built components
+
+***Icons & UI Enhancements
+1. react-icons – Icon library for React
+
+***API & Data Handling
+1. json-file – Product data handled using JSON file (mock API)
+
+***Authentication 
+1. better-auth – Authentication system for Next.js
+
+***Database
+1. mongodb – MongoDB object modeling tool
+
+***Environment Management
+1. .env – Secure environment variable management using .env file
+
+***Notifications 
+1. React Toastify - Show toast notification (alert message)

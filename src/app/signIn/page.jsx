@@ -11,13 +11,22 @@ import { Description, FieldError, Form, Input, Label, TextField} from "@heroui/r
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 
 
 export function SignInPage() {
 
 const [isShowPass , setIsShowPass ] = useState(false)
+
+const handleGoogleSignIn = async() =>{
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+
+  console.log(data);
+}
 
 
 const {register,
@@ -40,10 +49,10 @@ const {register,
     console.log({data, error});
 
     if (error){
-      alert('error signIn ' + error.message)
+      toast.error('error signIn ' + error.message)
     }
     if(data){
-      alert('submit successfully')
+      toast.success('submit successfully')
     }
     else{
       return
@@ -53,9 +62,9 @@ const {register,
 
   return (
 
-        <div className="flex justify-center my-10 ">
+    <div className="flex justify-center my-10 ">
 
-         <Form className="flex shadow rounded-md p-10 w-96 flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+    <Form className="flex shadow rounded-md p-10 w-96 flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
 
         <div className="text-center">
             <h2 className="text-xl font-bold ">Welcome to Our Application
@@ -146,6 +155,15 @@ const {register,
 
     <div>
       
+    </div>
+
+    <div className="border-t py-5 flex items-center">
+        <button className="w-full gap-1 flex items-center justify-center text-[12px]  border py-2 px-0 rounded-full text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer"
+        onClick={handleGoogleSignIn}
+        >
+            <FaGoogle></FaGoogle>
+              Login with Google
+        </button>
     </div>
     </Form> 
 

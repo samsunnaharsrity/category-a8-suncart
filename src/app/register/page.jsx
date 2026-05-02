@@ -15,6 +15,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 
 
@@ -52,14 +53,14 @@ const handleGoogleSignIn = async() =>{
     console.log({ data, error });
 
     if (error){
-      alert('error signUp ' + error.message)
+      toast.error('error signUp ' + error.message)
     }
       if (data) {
-    router.push("/"); // 🔥 manual redirect
+    router.push("/") 
   }
-    // if(data){
-    //   alert('submit successfully')
-    // }
+    if(data){
+      toast.success('submit successfully')
+    }
     else{
       return
     }
