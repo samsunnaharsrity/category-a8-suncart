@@ -96,7 +96,7 @@ console.log(products);
                     </div>
 
 
-                    <span className="absolute top-25 right-150 bg-red-500 text-white px-4 py-2 rounded-l-full font-bold shadow-lg">
+                    <span className="absolute top-25 right-120 bg-red-500 text-white px-4 py-2 rounded-l-full font-bold shadow-lg">
                     {products.discountPrice}% OFF
                     </span>
 
@@ -107,7 +107,7 @@ console.log(products);
 
                         </button>
 
-                        <button className="w-full flex justify-center bg-orange-500 text-gray-200 px-2 py-1 md:px-6 md:py-2 rounded-md hover:bg-orange-600 items-center gap-1 cursor-pointer">
+                        <button className="w-full flex justify-center bg-orange-500 text-gray-100 px-2 py-1 md:px-6 md:py-2 rounded-md hover:bg-orange-600 items-center gap-1 cursor-pointer">
                             
                             Buy Now
 
