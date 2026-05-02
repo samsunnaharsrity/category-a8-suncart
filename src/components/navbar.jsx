@@ -25,7 +25,7 @@ console.log(user);
       <div className="border-b shadow sticky top-0 z-50 bg-white w-full">
 
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
-      <div className="flex justify-between items-center container mx-auto ">
+      <div className="flex justify-between items-center">
         <div className="flex items-center">
                <Image
                src={"/logo.png"}
