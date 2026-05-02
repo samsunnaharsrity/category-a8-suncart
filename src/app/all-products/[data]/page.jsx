@@ -35,8 +35,8 @@ console.log(products);
 
 
     return (
-        <div className="w-9/12 mx-auto m-10">
-            <div className=" flex sm:flex-col-reverse justify-around gap-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 {/* details page img */}
                 <div className="relative w-[400px] h-[450px] aspect-square ">
                     <Image src={products.image} 
