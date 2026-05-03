@@ -29,10 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      theme ="light"
-      className={`${geistSans.className} ${montserrat.variable} h-full antialiased`}
+      className={`${geistSans.className} ${montserrat.variable} h-full antialiased light`}
     >
-      <body className="min-h-screen flex flex-col ">
+      <body className="min-h-screen flex flex-col bg-white">
         <Navbar></Navbar>
         <main className="container mx-auto">
           {children}
