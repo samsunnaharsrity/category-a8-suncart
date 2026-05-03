@@ -2,9 +2,9 @@ import { Geist } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import "animate.css";
-
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,15 +28,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="en" suppressHydrationWarning
       className={`${geistSans.className} ${montserrat.variable} h-full antialiased light`}
     >
-      <body className="min-h-screen flex flex-col bg-white">
-        <Navbar></Navbar>
+      <body className="min-h-screen flex flex-col bg-white text-black">
+
+          <Navbar></Navbar>
         <main className="container mx-auto">
           {children}
         </main>
           <Footer></Footer>
+
       </body>
     </html>
   );
