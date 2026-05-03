@@ -14,6 +14,7 @@ const MyProfilePage = () => {
 
   const { data: session } = authClient.useSession();
   const user = session?.user;
+console.log(user );
 
   if (!user) {
     return <div className="flex flex-col items-center gap-2">

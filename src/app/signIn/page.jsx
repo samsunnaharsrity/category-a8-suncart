@@ -164,7 +164,7 @@ const {register,
     </div>
 
     {/* google btn */}
-    <div className="border-t py-5 flex items-center">
+    <div className="flex items-center">
         <button className="w-full gap-1 flex items-center justify-center text-[12px]  border py-2 px-0 rounded-full text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer"
         onClick={handleGoogleSignIn}
         >
