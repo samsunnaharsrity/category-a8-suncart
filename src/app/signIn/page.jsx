@@ -1,8 +1,3 @@
-// export const metadata = {
-//   title: "SunCart - SignUp",
-//   description: "Sign Up",
-// };
-
 "use client";
 
 import { authClient } from "@/lib/auth-client";
@@ -23,6 +18,7 @@ const [isShowPass , setIsShowPass ] = useState(false)
 const handleGoogleSignIn = async() =>{
   const data = await authClient.signIn.social({
     provider: "google",
+    callbackURL: "/",
   });
 
   console.log(data);
@@ -62,9 +58,11 @@ const {register,
 
   return (
 
-    <div className="flex justify-center my-10 ">
+    <div className="flex justify-center my-10 space-y-5">
 
-    <Form className="flex shadow rounded-md p-10 w-96 flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+<div className="flex shadow rounded-md p-10 w-96 flex-col gap-4">
+
+    <Form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
 
         <div className="text-center">
             <h2 className="text-xl font-bold ">Welcome to Our Application
@@ -157,6 +155,15 @@ const {register,
       
     </div>
 
+    </Form> 
+
+    <div className="flex items-center gap-3">
+      <div className="flex-grow h-px bg-gray-400"></div>
+        <p className="text-gray-400 flex ">or</p>
+      <div className="flex-grow h-px bg-gray-400"></div>  
+    </div>
+
+    {/* google btn */}
     <div className="border-t py-5 flex items-center">
         <button className="w-full gap-1 flex items-center justify-center text-[12px]  border py-2 px-0 rounded-full text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer"
         onClick={handleGoogleSignIn}
@@ -165,8 +172,7 @@ const {register,
               Login with Google
         </button>
     </div>
-    </Form> 
-
+</div>
     </div>    
   );
 }

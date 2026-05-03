@@ -5,7 +5,6 @@ import { headers } from 'next/headers'
 // This function can be marked `async` if using `await` inside
 export async function proxy(request) {
 
-//   return NextResponse.redirect(new URL('/home', request.url))
 // console.log("proxy message");
 
 
