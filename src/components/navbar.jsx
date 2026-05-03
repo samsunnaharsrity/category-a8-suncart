@@ -8,6 +8,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import NavLink from "./navLink";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
+import { FiLogOut } from "react-icons/fi";
 
 
 const Navbar = () => {
@@ -69,12 +70,34 @@ console.log(user);
 
           ${open ? "translate-x-0 opacity-100 pointer-events-auto" : "translate-x-full opacity-0 pointer-events-none"}`}
         >
-          <div className=" font-semibold">
+          <div className=" font-semibold text-[12px]">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/all-products">Products</NavLink>
             <NavLink href="/myProfile">My Profile</NavLink>
           </div>
+
+                    {/*response nav buttons */}
+{
+      user? (
+      <div className="flex items-center gap-1">
+
+            <button 
+            onClick={async() => await authClient.signOut()} 
+            className=" rounded-md py-1 px-3 bg-orange-500 hover:bg-orange-600 text-[10px] font-semibold">
+                <Link href={"/"} className="flex items-center gap-1 font-semibold">
+                <span><FiLogOut /></span>
+                Logout</Link>
+            </button>
+
+      </div>)            
+        :         
+            (<button className=" rounded-md py-1 px-4 bg-orange-500 hover:bg-orange-600 text-[10px] font-semibold">
+              <Link href={"/signIn"}>Login</Link>
+            </button>)
+}
         </div>
+
+
 
       </div>  
               
@@ -125,8 +148,11 @@ console.log(user);
 
             <Button 
             onClick={async() => await authClient.signOut()} 
-            className=" rounded-md py-1 px-5 bg-orange-500 hover:bg-orange-600">
-                <Link href={"/"}>Logout</Link>
+            className=" rounded-md py-1 px-3 text-[12px] bg-orange-500 hover:bg-orange-600">
+                <Link href={"/"} className="flex items-center gap-1 font-semibold">
+                <span><FiLogOut className="text-[8px]"/></span>
+                Logout
+                </Link>
             </Button>
 
       </div>)            
