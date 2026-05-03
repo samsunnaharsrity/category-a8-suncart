@@ -8,7 +8,7 @@ export const generateMetadata = async({params})=> {
     const {data} =await params;
     console.log(data);
 
-  const res = await fetch("https://category-a8-suncart.vercel.app/data.json");
+  const res = await fetch("https://category-a8-suncart-server.onrender.com/projects");
   const allProducts = await res.json();
 
   const product = allProducts.find(item => item.id == data);
@@ -25,7 +25,7 @@ const {data} = await params;
 console.log(data);
 
 
-const res = await fetch("http://localhost:3000/data.json")
+const res = await fetch("https://category-a8-suncart-server.onrender.com/projects")
 const allProducts = await res.json()
  console.log(allProducts ,"fetch");
 
@@ -35,10 +35,10 @@ console.log(products);
 
 
     return (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 ">
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-items-center">
                 {/* details page img */}
-                <div className="relative w-[400px] h-[450px] sm:h-[450px] aspect-square ">
+                <div className="relative w-[350px] md:w-[400px] aspect-square">
                     <Image src={products.image} 
                         alt={products.name} 
                         fill
@@ -49,7 +49,7 @@ console.log(products);
 
 
                 {/* details page all data */}
-                <div className="space-y-5 my-10">
+                <div className="space-y-5 my-10 ">
 
                     <div className="flex">
                         <Chip className=' mr-2 text-gray-100 bg-orange-500'>{products.brand}</Chip>
@@ -96,12 +96,12 @@ console.log(products);
                     </div>
 
 
-                    <span className="absolute top-4 right-0  bg-red-500 text-white px-4 py-2 rounded-l-full font-bold shadow-lg">
+                    <span className="absolute top-25 right-18 md:right-[680px]  bg-red-500 text-white px-4 py-2 rounded-l-full font-bold shadow-lg">
                     {products.discountPrice}% OFF
                     </span>
 
                             {/* button */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 ">
                         <button className='w-full flex justify-center border py-2 rounded-md text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white cursor-pointer'>
                             Add to Cart
 

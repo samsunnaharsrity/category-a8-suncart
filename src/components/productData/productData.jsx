@@ -5,7 +5,7 @@ import NavLink from "../navLink";
 
 const ProductData = async() => {
 
-const res = await fetch("http://localhost:3000/data.json")
+const res = await fetch("https://category-a8-suncart-server.onrender.com/projects")
 const data = await res.json()
 console.log(data);
 
@@ -14,7 +14,7 @@ console.log(latestProducts);
 
     return (
         <div className="mt-10 px-4 sm:px-6 lg:px-0">
-            <h2 className="text-3xl font-bold sm:text-left mb-6">Popular Products</h2>
+            <h2 className=" animate__animated animate__bounce text-3xl font-bold sm:text-left mb-6">Popular Products</h2>
 
 
             <div className=" grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3">

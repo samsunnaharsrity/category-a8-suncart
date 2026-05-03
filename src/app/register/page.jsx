@@ -71,7 +71,7 @@ const handleGoogleSignIn = async() =>{
 
         <div className="flex justify-center my-10 ">
 
-         <Form className="flex shadow rounded-md p-10 w-96 flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+         <Form className="flex shadow rounded-md p-10 w-full max-w-96 flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
 
         <div className="text-center">
             <h2 className="text-xl font-bold ">Welcome to Our Application

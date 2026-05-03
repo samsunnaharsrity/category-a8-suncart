@@ -1,3 +1,4 @@
+"use client"
 import { TbBrand4Chan } from "react-icons/tb";
 
 const TopBrands = () => {
@@ -5,7 +6,7 @@ const TopBrands = () => {
         <div>
 
 
-            <div className="mt-10">
+            <div className="mt-10 animate__animated animate__bounce">
                 <h2 className="flex items-center gap-1 text-3xl font-bold sm:text-left mb-6">
                     <span className="text-orange-500"><TbBrand4Chan /></span>
                     Top Brands
@@ -19,7 +20,7 @@ const TopBrands = () => {
                         {/* brands */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center mb-10">
 
-                <div className="border shadow p-8 rounded-md">
+                <div className="animate__animated animate__bounce border shadow p-8 rounded-md">
                     <div className="flex items-center justify-center">
                         <img className="" src="./brand-1.png" alt="" />
                     </div>
@@ -32,7 +33,7 @@ const TopBrands = () => {
                 </div>
 
 
-                <div className="border shadow p-8 rounded-md">
+                <div className="animate__animated animate__bounce border shadow p-8 rounded-md">
                     <div className="flex items-center justify-center">
                         <img className="w-[80px]" src="./brand-2.png" alt="" />
                     </div>
@@ -45,7 +46,7 @@ const TopBrands = () => {
                 </div>
 
 
-                <div className="border shadow p-8 rounded-md">
+                <div className="animate__animated animate__bounce border shadow p-8 rounded-md">
                     <div className="flex items-center justify-center">
                         <img className="w-[80px] pb-3" src="./brand-3.png" alt="" />
                     </div>
@@ -61,7 +62,7 @@ const TopBrands = () => {
 
 
 
-                <div className="border shadow p-8 rounded-md">
+                <div className="animate__animated animate__bounce border shadow p-8 rounded-md">
                     <div className="flex items-center justify-center">
                         <img className="w-[100px] pb-3" src="./brand-4.png" alt="" />
                     </div>

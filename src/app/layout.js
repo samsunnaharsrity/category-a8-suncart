@@ -1,6 +1,8 @@
 import { Geist } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import "animate.css";
+
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -30,9 +32,9 @@ export default function RootLayout({ children }) {
       theme ="light"
       className={`${geistSans.className} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col ">
+      <body className="min-h-screen flex flex-col ">
         <Navbar></Navbar>
-        <main className="container mx-auto ">
+        <main className="container mx-auto">
           {children}
         </main>
           <Footer></Footer>

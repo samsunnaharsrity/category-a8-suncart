@@ -22,9 +22,9 @@ console.log(user);
 
 //  className="flex justify-between items-center container mx-auto px-4"
         
-      <div className="border-b shadow sticky top-0 z-50 bg-white w-full">
+      <div className="sticky top-0 z-50 bg-white w-full border-b shadow">
 
-      <div className="container mx-auto flex justify-between items-center ">
+      <div className="w-full px-4 flex justify-between items-center ">
         
       <div className="flex justify-between items-center">
         <div className="flex items-center">
@@ -47,7 +47,7 @@ console.log(user);
 
                             {/* responsive sidebar */}
 
-      <div className="relative md:hidden">
+      <div className="relative md:hidden flex">
 
         <div
           className=" md:hidden text-2xl cursor-pointer px-2  relative z-30"

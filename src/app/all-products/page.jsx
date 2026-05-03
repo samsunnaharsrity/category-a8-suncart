@@ -9,7 +9,7 @@ export const metadata = {
 
 const AllProductsPage =async () => {
 
-const res = await fetch("http://localhost:3000/data.json")
+const res = await fetch("https://category-a8-suncart-server.onrender.com/projects")
 const allProducts = await res.json()
 console.log(allProducts);
 
@@ -24,9 +24,9 @@ console.log(allProducts);
 
     return (
         <div>
-            <h2 className="text-3xl font-bold mt-10">All Products</h2>
+            <h2 className="text-3xl font-bold mt-10 px-3">All Products</h2>
 
-            <div className=" grid grid-cols-2 md:grid-cols-3">
+            <div className=" grid grid-cols-2 md:grid-cols-3 gap-4">
                 {
                     allProducts.map(latestProduct =>
                         <ProductCart key={latestProduct.id} latestProduct={latestProduct}></ProductCart>
